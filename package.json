@@ -1,0 +1,26 @@
+{
+  "name": "AngularTemplate-Gulp",
+  "version": "0.1.0",
+  "description": "Gulp Template",
+  "authors": [
+    "Brock Billings"
+  ],
+  "license": "2ronto Designs LLC",
+  "homepage": "https://2rontoDesigns.com",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-print": "^2.0.1",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "yargs": "^4.2.0"
+  }
+}
