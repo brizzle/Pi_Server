@@ -1,0 +1,30 @@
+[
+  {
+    "firstName": "Brock",
+    "lastName": "Billings",
+    "age": 31,
+    "isActive": false,
+    "image": "http://placehold.it/32x32",
+    "email": "brock_billings@me.com",
+    "phone": "1.405.306.3618",
+    "address": "5171 E 30TH ST, TULSA, OK, 74114",
+    "description": "Sentence 1. Sentence 2. Sentence 3.\r\n",
+    "registeredDate": "2014-07-15T01:44:39 +05:00",
+    "latitude": 69.128936,
+    "longitude": 104.94576
+  },
+  {
+    "firstName": "Blake",
+    "lastName": "Billings",
+    "age": 28,
+    "isActive": false,
+    "image": "http://placehold.it/32x32",
+    "email": "brock_billings@me.com",
+    "phone": "1.405.760.7704",
+    "address": "5171 E 30TH ST, TULSA, OK, 74114",
+    "description": "Sentence 1. Sentence 2. Sentence 3.\r\n",
+    "registeredDate": "2014-07-15T01:44:39 +05:00",
+    "latitude": 69.128936,
+    "longitude": 104.94576
+  }
+]

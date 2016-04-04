@@ -22,7 +22,9 @@
 
 	// args is the HelloWorld program to compile.
 	"args": ["src/client/app/routes.ts",
-    "src/client/app/server.ts"],
+    "src/client/app/server.ts",
+    "src/client/app/musicians.controller.ts",
+    "src/client/app/musicians.dataservice.ts"],
 
 	// use the standard tsc problem matcher to find compile problems
 	// in the output.
