@@ -8,11 +8,11 @@ In Visual Studio Code, to add definitely typed files, the user will need to be a
 To add a "d.ts" file, in the termial, change directories until you are in the directory that you want to add the files.
 
 - `tsd install node --save`
-- 'tsd install jquery --save'
+- `tsd install jquery --save`
 
 If you want to add more than one...
 
-- 'tsd install node jquery --save'
+- `tsd install node jquery --save`
 
 ## Requirements
 
