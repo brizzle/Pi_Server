@@ -1,9 +1,10 @@
 {
-  "name": "AngularTemplate-Gulp",
+  "name": "pi-server",
   "version": "0.1.0",
   "description": "Gulp Template",
   "authors": [
-    "Brock Billings"
+    "Brock Billings",
+    "Charlie Evans"
   ],
   "license": "2ronto Designs LLC",
   "homepage": "https://2rontoDesigns.com",
