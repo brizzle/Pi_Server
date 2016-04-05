@@ -6,7 +6,7 @@ import musiciansController = require('./musicians.controller');
 export class Routes {
         
         private musicians: string = './controllers/musicians';
-        private musiciansController: musiciansController.MusiciansController;
+        private musiciansController: musiciansController.MusiciansController = null;
         
         constructor() {
             this.musiciansController = new musiciansController.MusiciansController();
