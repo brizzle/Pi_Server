@@ -1,2 +1,5 @@
+# ignore javascript files
 *.js
-node_modules/**/node_modules
+
+# ignore node module files
+node_modules/*
