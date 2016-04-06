@@ -3,6 +3,7 @@
 import http = require('http');
 import express = require('express');
 import routes = require('./routes');
+import path = require('path');
 
 export class Server {
         
@@ -18,8 +19,7 @@ export class Server {
     private routes: routes.Routes = new routes.Routes();
         
     constructor() {
-            //this.Activate();
-        console.log('Server starting..');
+        this.Activate();
             //this.server = http.createServer(this.OnRequest);
 		    //this.server.listen(this.port, this.ipAddress);
             
@@ -30,37 +30,6 @@ export class Server {
             }).listen(1337);
             //}).listen(1337, '127.0.0.1');
             */
-       
-        var path = require('path');
-        var appDir = path.dirname(require.main.filename);
-        
-        console.log('App Directory... ', appDir);
-        console.log('Dir... ', __dirname);
-            
-        var app = express();
-            //var routes = require('./routes')(app);
-            
-            //app.GetRoutes();
-          
-            
-        this.routes.GetRoutes(app);
-        
-            //require('./routes')(app);
-            
-            /*
-            app.get('/', (req: express.Request, res: express.Response) => {
-                res.send('Hello Seattle\n');
-            });
-            
-            app.get('/test/', (req: express.Request, res: express.Response) => {
-                res.send('Hello TEST Seattle\n');
-            });
-            */
-            
-        app.listen(this.port, this.ipAddress);
-            
-        console.log('Server running at http://' + this.ipAddress + '/...');
-        console.log('Listening on port ' + this.port + '...');
     }
         
     Activate() {
@@ -73,11 +42,19 @@ export class Server {
 	}
         
     CreateServer(): void {
-        console.log('Server starting..');
-        this.server = http.createServer(this.OnRequest);
-		this.server.listen(this.port, this.ipAddress);
-		console.log('Server running at http://' + this.ipAddress + '/');
+        console.log('Server starting...');
+        //var appDir = path.dirname(require.main.filename);
+        //console.log('App Directory... ', appDir);
+        //console.log('Dir... ', __dirname);
+            
+        var app = express();
+        this.routes.GetRoutes(app);
+            
+        app.listen(this.port, this.ipAddress);
+        
+		console.log('Server running at http://' + this.ipAddress + '/...');
+        console.log('Listening on port ' + this.port + '...');
     }
 }
     
-var myServer = new Server();
+var piServer = new Server();
