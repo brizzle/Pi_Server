@@ -13,7 +13,7 @@ export class Server {
         
     private header: Object = {'Content-Type': 'text/plain'};
     private port: number = 1337;
-    private ipAddress: string = '127.0.0.1';
+    private ipAddress: string = 'localhost';
     private server: http.Server;
     private routes: routes.Routes = new routes.Routes();
         
@@ -30,8 +30,12 @@ export class Server {
             }).listen(1337);
             //}).listen(1337, '127.0.0.1');
             */
-            
-		    
+       
+        var path = require('path');
+        var appDir = path.dirname(require.main.filename);
+        
+        console.log('App Directory... ', appDir);
+        console.log('Dir... ', __dirname);
             
         var app = express();
             //var routes = require('./routes')(app);

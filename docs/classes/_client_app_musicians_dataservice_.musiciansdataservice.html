@@ -89,12 +89,19 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#use_strict" class="tsd-kind-icon">use strict</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#add" class="tsd-kind-icon">Add</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#delete" class="tsd-kind-icon">Delete</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#get" class="tsd-kind-icon">Get</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#getall" class="tsd-kind-icon">Get<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#readjsonfile" class="tsd-kind-icon">ReadJSONFile</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#update" class="tsd-kind-icon">Update</a></li>
 							</ul>
 						</section>
@@ -113,7 +120,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L4">client/app/musicians.dataservice.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L7">client/app/musicians.dataservice.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_client_app_musicians_dataservice_.musiciansdataservice.html" class="tsd-signature-type">MusiciansDataService</a></h4>
@@ -122,27 +129,53 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="use_strict" class="tsd-anchor"></a>
+					<h3>use strict</h3>
+					<div class="tsd-signature tsd-kind-icon">use strict<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L7">client/app/musicians.dataservice.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="add" class="tsd-anchor"></a>
 					<h3>Add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Add<span class="tsd-signature-symbol">(</span>dto<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">Add<span class="tsd-signature-symbol">(</span>dto<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L41">client/app/musicians.dataservice.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L66">client/app/musicians.dataservice.ts:66</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds the data.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>dto: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data transfer object.</p>
+										<h4 id="notes">Notes</h4>
+										<p>Adds the data to the data source.</p>
+										<h4 id="example">Example</h4>
+										<pre><code class="lang-typescript">Add(theDto)
+</code></pre>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -150,22 +183,35 @@
 					<a name="delete" class="tsd-anchor"></a>
 					<h3>Delete</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Delete<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">Delete<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L49">client/app/musicians.dataservice.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L98">client/app/musicians.dataservice.ts:98</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes the data.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The unique identifier.</p>
+										<h4 id="notes">Notes</h4>
+										<p>Deletes the data from the data source by finding the unique identifier.</p>
+										<h4 id="example">Example</h4>
+										<pre><code class="lang-typescript">Delete(theId)
+</code></pre>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -173,13 +219,13 @@
 					<a name="get" class="tsd-anchor"></a>
 					<h3>Get</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span></li>
+						<li class="tsd-signature tsd-kind-icon">Get<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L14">client/app/musicians.dataservice.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L24">client/app/musicians.dataservice.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -195,8 +241,18 @@
 										<p>The unique identifier.</p>
 									</div>
 								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback to return.</p>
+										<h4 id="notes">Notes</h4>
+										<h4 id="example">Example</h4>
+										<pre><code class="lang-typescript">Get(theId, theCallbackFunction)
+</code></pre>
+									</div>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -204,13 +260,13 @@
 					<a name="getall" class="tsd-anchor"></a>
 					<h3>Get<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>All<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L26">client/app/musicians.dataservice.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L44">client/app/musicians.dataservice.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -218,7 +274,61 @@
 									<p>Gets all the data.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback to return.</p>
+										<h4 id="notes">Notes</h4>
+										<h4 id="example">Example</h4>
+										<pre><code class="lang-typescript">GetAll(theCallbackFunction)
+</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readjsonfile" class="tsd-anchor"></a>
+					<h3>ReadJSONFile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ReadJSONFile<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L114">client/app/musicians.dataservice.ts:114</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reads the JSON file.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>filename: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The filename.</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback function.</p>
+										<h4 id="notes">Notes</h4>
+										<h4 id="example">Example</h4>
+										<pre><code class="lang-typescript">ReadJSONFile(theFilename, theCallbackFunction)
+</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -232,13 +342,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L45">client/app/musicians.dataservice.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L82">client/app/musicians.dataservice.ts:82</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Updates the data.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>dto: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data transfer object.</p>
+										<h4 id="notes">Notes</h4>
+										<p>Updates the data to the data source.</p>
+										<h4 id="example">Example</h4>
+										<pre><code class="lang-typescript">Update(theDto)
+</code></pre>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -290,6 +413,9 @@
 						<a href="../modules/_scripts_typings_serve_static_serve_static_d_.html">"<wbr>Scripts/typings/serve-<wbr>static/serve-<wbr>static.d"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="../modules/_scripts_typings_sqlite3_sqlite3_d_.html">"<wbr>Scripts/typings/sqlite3/sqlite3.d"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="../modules/_scripts_typings_tsd_d_.html">"<wbr>Scripts/typings/tsd.d"</a>
 					</li>
 				</ul>
@@ -304,6 +430,9 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#use_strict" class="tsd-kind-icon">use strict</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#add" class="tsd-kind-icon">Add</a>
 							</li>
@@ -315,6 +444,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#getall" class="tsd-kind-icon">Get<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#readjsonfile" class="tsd-kind-icon">ReadJSONFile</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#update" class="tsd-kind-icon">Update</a>
