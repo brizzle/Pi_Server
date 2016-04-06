@@ -9,7 +9,7 @@
       "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
     },
     "node/node.d.ts": {
-      "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+      "commit": "d969b903d1fce89a5e43828ec68458b4f852db4d"
     },
     "serve-static/serve-static.d.ts": {
       "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
@@ -22,6 +22,9 @@
     },
     "mime/mime.d.ts": {
       "commit": "bf4ecf5b68887ed5a065e3922885c34d0f5739df"
+    },
+    "sqlite3/sqlite3.d.ts": {
+      "commit": "d969b903d1fce89a5e43828ec68458b4f852db4d"
     }
   }
 }

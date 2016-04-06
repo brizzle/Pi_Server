@@ -18,47 +18,125 @@ export class MusiciansController {
     constructor() {
         this.musiciansDataService = new dataService.MusiciansDataService();
         
-        this.user = {firstName: 'brock', lastName: 'billings', department: 'IT App Dev'}
+        //this.user = {firstName: 'brock', lastName: 'billings', department: 'IT App Dev'}
         
         // TODO: Need to set Base URL...
     }
     
-    /*
-     * Gets all the musicians.
+    /**
+     * Gets data.
+     * 
+     * @param {Express.Request} request - The request.
+     * @param {Express.Response} response - The response.
+     * 
+     * #### Notes
+     * This gets all the data.
+     * 
+     * #### Example
+     * ```typescript
+     * GetAll(theRequest, theResponse)
+     * ```
      */
-    GetAll(request: express.Request, response: express.Response) {
+    GetAll(request: express.Request, response: express.Response): void {
         //request.authenticatedUser = this.user;
         
         //console.log('Authenticated User... ', request.authenticatedUser, '\n');
         
-        console.log('The local address ', request.connection.localAddress, ' was accessed on port ', request.connection.localPort, '...\n');
-        console.log('Response Status Code... ', response.statusCode, '\n');
+        //console.log('The local address ', request.connection.localAddress, ' was accessed on port ', request.connection.localPort, '...\n');
         
-        var data = this.musiciansDataService.GetAll();
-        
+        this.musiciansDataService.GetAll((err: Error, data) => {
+            if (err) {
+                console.log('ERROR: ', err.message);
+                response.status(404);
+                this.OnComplete(response, err.message);
+            } else {
+                this.OnComplete(response, data);
+            }
+        });
+    }
+    
+    /**
+     * When retrieving data has completed.
+     * 
+     * @param {Express.Response} response - The response.
+     * @param {object} data - The data.
+     * 
+     * #### Notes
+     * This method is for when the data has been completely returned.
+     * 
+     * #### Example
+     * ```typescript
+     * OnComplete(theResponse, theData)
+     * ```
+     */
+    OnComplete(response: express.Response, data) {
         response
             .status(response.statusCode)
-            .json(data);
+            .send(data);
     }
-        
-    Get(request: express.Request, response: express.Response, id: number) {
-        
-        var data = this.musiciansDataService.Get(id);
-        
-        response
-            .status(response.statusCode)
-            .json(data);
+    
+    /**
+     * Gets data based on the unique identifier.
+     * 
+     * @param {Express.Request} request - The request.
+     * @param {Express.Response} response - The response.
+     * @param {number} id - The unique identifier.
+     * 
+     * #### Notes
+     * 
+     * #### Example
+     * ```typescript
+     * Get(theRequest, theResponse, theId)
+     * ```
+     */
+    Get(request: express.Request, response: express.Response, id: number): void {
+        this.musiciansDataService.Get(id, (err: Error, data) => {
+            if (err) {
+                console.log('ERROR: ', err.message);
+                response.status(404);
+                this.OnComplete(response, err.message);
+            } else {
+                this.OnComplete(response, data);
+            }
+        });
     }
-        
-    Add() {
-            
+    
+    /**
+     * Adds data.
+     * 
+     * #### Notes
+     * 
+     * #### Example
+     * ```typescript
+     * Add()
+     * ```
+     */ 
+    Add(): void {
     }
-        
-    Update() {
-            
+    
+    /**
+     * Updates data.
+     * 
+     * #### Notes
+     * 
+     * #### Example
+     * ```typescript
+     * Update()
+     * ```
+     */
+    Update(): void {         
     }
-        
-    Delete(id: number) {
-            
+    
+    /**
+     * Deletes data.
+     * 
+     * #### Notes
+     * 
+     * #### Example
+     * ```typescript
+     * Delete(theId)
+     * ```
+     */ 
+    Delete(id: number): void {
     }
 }

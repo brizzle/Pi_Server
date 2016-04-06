@@ -73,17 +73,21 @@
 					<li>Install Node</li>
 				</ul>
 				<h2 id="steps">Steps</h2>
-				<ol>
+				<p>Creating a &quot;package.json&quot; file:</p>
+				<ul>
+					<li>Open terminal</li>
+					<li><p>Type <code>npm init [-f|--force|-y|--yes]</code> for the defaults</p>
+					</li>
 					<li><p>Install node packages:</p>
 						<pre><code class="lang-bash"> $ npm install
 </code></pre>
 					</li>
 					<li><p>Adding definitely typed (&quot;d.ts&quot;) files:</p>
-						<p> In Visual Studio Code, to add definitely typed files, the user will need to be a level above the &quot;typings&quot; folder. A &quot;tsd.json&quot; file will be created and &quot;d.ts&quot; files will be added to this. If the &quot;typings&quot; folder doesn&#39;t exist, it will be created as well as the &quot;tsd.json&quot; file.</p>
+						<p> In Visual Studio Code, to add &quot;d.ts&quot; files, the user will need to be a level above the &quot;typings&quot; folder. A &quot;tsd.json&quot; file will be created and &quot;d.ts&quot; files will be added to this. If the &quot;typings&quot; folder doesn&#39;t exist, it will be created as well as the &quot;tsd.json&quot; file.</p>
 						<p> To add a &quot;d.ts&quot; file, in the termial, change directories until you are in the directory that you want to add the files.</p>
 						<ul>
 							<li>Open terminal</li>
-							<li>Type <code>tsd install node jquery --save</code></li>
+							<li>Type <code>tsd install node jquery sqlite3 --save</code></li>
 						</ul>
 					</li>
 					<li><p>Creating documentation:</p>
@@ -91,7 +95,9 @@
 </code></pre>
 						<p>This will be produced in the &quot;docs&quot; folder.</p>
 					</li>
-				</ol>
+				</ul>
+				<h2 id="references">References</h2>
+				<p>NPM install documentation <a href="https://docs.npmjs.com/cli/install">npm-install</a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -135,6 +141,9 @@
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="modules/_scripts_typings_serve_static_serve_static_d_.html">"<wbr>Scripts/typings/serve-<wbr>static/serve-<wbr>static.d"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_scripts_typings_sqlite3_sqlite3_d_.html">"<wbr>Scripts/typings/sqlite3/sqlite3.d"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="modules/_scripts_typings_tsd_d_.html">"<wbr>Scripts/typings/tsd.d"</a>
