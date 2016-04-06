@@ -1,6 +1,8 @@
 /// <reference path="../../Scripts/typings/tsd.d.ts" />
 
-import fs = require('fs');
+import sqlite3 = require('sqlite3');
+import sqlService = require('./sqlite.service');
+import fileService = require('./file.service');
 
 // musicians.dataservice.js
 export class MusiciansDataService {
@@ -22,12 +24,18 @@ export class MusiciansDataService {
      * ```
      */
     Get(id: number, callback: Function): void {
-        callback(null, [{
-            'id': 1,
-            'name': 'Max',
-            'band': 'Maximum Pain',
-            'instrument': 'guitar'
-        }]);
+        
+        //https://codeforgeek.com/2014/07/node-sqlite-tutorial/
+        
+        var sql = new sqlService.SqliteService('./CarInsurance.sqlite');
+        var query: string = 'SELECT * FROM Car WHERE Id = ' + id;
+        var t = sql.Read(query, (err: Error, data) => {
+            if (err) {
+                console.log('ERROR', err.name);
+            } else {
+                callback(null, data);
+            }
+        });
     }
     
     /**
@@ -42,11 +50,14 @@ export class MusiciansDataService {
      * ```
      */
     GetAll(callback: Function): void {
-        return this.ReadJSONFile('./data.json', (err, json: JSON) => {
-            if(err) {
-                callback(err);
+        var sql = new sqlService.SqliteService('./CarInsurance.sqlite');
+        var query: string = 'SELECT * FROM Car';
+        var t = sql.Read(query, (err: Error, data) => {
+            if (err) {
+                console.log('ERROR', err.name);
+            } else {
+                callback(null, data);
             }
-            callback(null, json);
         });
     }
     
@@ -96,32 +107,5 @@ export class MusiciansDataService {
      * ```
      */
     Delete(id: number): void {
-    }
-    
-    /**
-     * Reads the JSON file.
-     * 
-     * @param {string} filename - The filename.
-     * @param {ReadJSONFileCallback} callback - The callback function.
-     * 
-     * #### Notes
-     * 
-     * #### Example
-     * ```typescript
-     * ReadJSONFile(theFilename, theCallbackFunction)
-     * ```
-     */
-    ReadJSONFile(filename: string, callback: Function) {
-        fs.readFile(filename, (err, data: Buffer) => {
-            if(err) {
-                callback(err);
-                return;
-            }
-            try {
-                callback(null, data.toString());
-            } catch(exception) {
-                callback(exception);
-            }
-        });
     }
 }
