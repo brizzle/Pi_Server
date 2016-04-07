@@ -46,11 +46,12 @@ export class SqliteService {
         this.db.serialize(() => {
             this.db.all(query, (err: Error, rows: Array<any>) => {
                 if (err) {
-                    console.log('ERROR: ', err);
-                } else {
-                    console.log('Records found: ', rows.length);
-                    callback(null, rows);
+                    console.log('ERROR NAME: ', err.name);
+                    console.log('ERROR MESSAGE: ', err.message);
+                    return;
                 }
+                console.log('Records found: ', rows.length);
+                callback(null, rows);
             })
         });
         

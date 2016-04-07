@@ -4,8 +4,8 @@ import sqlite3 = require('sqlite3');
 import sqlService = require('./sqlite.service');
 import fileService = require('./file.service');
 
-// musicians.dataservice.js
-export class MusiciansDataService {
+// dataservice.js
+export class DataService {
     'use strict';
     
     constructor() {
@@ -32,9 +32,9 @@ export class MusiciansDataService {
         var t = sql.Read(query, (err: Error, data) => {
             if (err) {
                 console.log('ERROR', err.name);
-            } else {
-                callback(null, data);
+                return;
             }
+            callback(null, data);
         });
     }
     
@@ -97,15 +97,25 @@ export class MusiciansDataService {
      * Deletes the data.
      * 
      * @param {number} id - The unique identifier.
+     * @param {DeleteCallback} callback - The callback function.
      * 
      * #### Notes
      * Deletes the data from the data source by finding the unique identifier.
      * 
      * #### Example
      * ```typescript
-     * Delete(theId)
+     * Delete(theId, theCallbackFunction)
      * ```
      */
-    Delete(id: number): void {
+    Delete(id: number, callback: Function): void {
+        var sql = new sqlService.SqliteService('./CarInsurance.sqlite');
+        var query: string = 'DELETE FROM Car WHERE Id = ' + id;
+        var t = sql.Run(query, (err: Error, data) => {
+            if (err) {
+                console.log('ERROR', err.name);
+            } else {
+                callback(null, data);
+            }
+        });
     }
 }
