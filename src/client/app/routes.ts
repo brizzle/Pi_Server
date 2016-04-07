@@ -1,22 +1,21 @@
 /// <reference path="../../Scripts/typings/tsd.d.ts" />
 
 import express = require('express');
-import musiciansController = require('./musicians.controller');
+import controller = require('./controller');
 
 export class Routes {
-        
-        private musicians: string = './controllers/musicians';
-        private musiciansController: musiciansController.MusiciansController = null;
+    
+        private controller: controller.Controller = null;
         
         constructor() {
-            this.musiciansController = new musiciansController.MusiciansController();
+            this.controller = new controller.Controller();
         }
         
         GetRoutes(app) {
-            app.get('/musicians', (request, response) => { this.musiciansController.GetAll(request, response) } );
-            app.get('/musicians/:id', (request, response) => { this.musiciansController.Get(request, response, 1) } );
-            //app.post('/musicians', this.musiciansController.Add());
-            //app.put('/musicians/:id', this.musiciansController.Update());
-            //app.delete('/musicians/:id', this.musiciansController.Delete(1));
+            app.get('/controllers', (request: express.Request, response: express.Response) => { this.controller.GetAll(request, response) } );
+            app.get('/controllers/:id', (request: express.Request, response: express.Response) => { this.controller.Get(request, response) } );
+            //app.post('/controllers', this.controller.Add());
+            //app.put('/controllers/:id', this.controller.Update());
+            //app.delete('/controllers/:id', (request: express.Request, response: express.Response, id: number) => { this.controller.Delete(request, response, id) });
         }
 }

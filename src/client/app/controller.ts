@@ -1,7 +1,7 @@
 /// <reference path="../../Scripts/typings/tsd.d.ts" />
 
 import express = require('express');
-import dataService = require('./musicians.dataservice');
+import ds = require('./dataservice');
 
 export interface User {
     firstName: string;
@@ -9,14 +9,24 @@ export interface User {
     department: string;
 }
 
-// musicians.controller.js
-export class MusiciansController {
+// controller.js
+export class Controller {
     
     private user: User = null;
-    private musiciansDataService: dataService.MusiciansDataService = null;
+    private dataService: ds.DataService = null;
     
+    /**
+     * Creates a new instance of Controller.
+     * 
+     * #### Notes
+     * 
+     * #### Example
+     * ```typescript
+     * new Controller()
+     * ```
+     */
     constructor() {
-        this.musiciansDataService = new dataService.MusiciansDataService();
+        this.dataService = new ds.DataService();
         
         //this.user = {firstName: 'brock', lastName: 'billings', department: 'IT App Dev'}
         
@@ -44,7 +54,7 @@ export class MusiciansController {
         
         //console.log('The local address ', request.connection.localAddress, ' was accessed on port ', request.connection.localPort, '...\n');
         
-        this.musiciansDataService.GetAll((err: Error, data) => {
+        this.dataService.GetAll((err: Error, data) => {
             if (err) {
                 console.log('ERROR: ', err.message);
                 response.status(404);
@@ -58,7 +68,7 @@ export class MusiciansController {
     /**
      * When retrieving data has completed.
      * 
-     * @param {Express.Response} response - The response.
+     * @param {express.Response} response - The response.
      * @param {object} data - The data.
      * 
      * #### Notes
@@ -78,8 +88,8 @@ export class MusiciansController {
     /**
      * Gets data based on the unique identifier.
      * 
-     * @param {Express.Request} request - The request.
-     * @param {Express.Response} response - The response.
+     * @param {express.Request} request - The request.
+     * @param {express.Response} response - The response.
      * @param {number} id - The unique identifier.
      * 
      * #### Notes
@@ -89,15 +99,15 @@ export class MusiciansController {
      * Get(theRequest, theResponse, theId)
      * ```
      */
-    Get(request: express.Request, response: express.Response, id: number): void {
-        this.musiciansDataService.Get(id, (err: Error, data) => {
+    Get(request: express.Request, response: express.Response): void {
+        this.dataService.Get(parseInt(request.params['id']), (err: Error, data) => {
             if (err) {
                 console.log('ERROR: ', err.message);
                 response.status(404);
                 this.OnComplete(response, err.message);
-            } else {
-                this.OnComplete(response, data);
+                return;
             }
+            this.OnComplete(response, data);
         });
     }
     
@@ -137,6 +147,15 @@ export class MusiciansController {
      * Delete(theId)
      * ```
      */ 
-    Delete(id: number): void {
+    Delete(request: express.Request, response: express.Response, id: number): void {
+        this.dataService.Delete(id, (err: Error, data) => {
+            if (err) {
+                console.log('ERROR: ', err.message);
+                response.status(404);
+                this.OnComplete(response, err.message);
+            } else {
+                this.OnComplete(response, data);
+            }
+        });
     }
 }

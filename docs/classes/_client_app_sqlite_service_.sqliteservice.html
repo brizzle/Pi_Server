@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MusiciansDataService | Pi Server</title>
+	<title>SqliteService | Pi Server</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,13 +57,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_client_app_musicians_dataservice_.html">&quot;client/app/musicians.dataservice&quot;</a>
+					<a href="../modules/_client_app_sqlite_service_.html">&quot;client/app/sqlite.service&quot;</a>
 				</li>
 				<li>
-					<a href="_client_app_musicians_dataservice_.musiciansdataservice.html">MusiciansDataService</a>
+					<a href="_client_app_sqlite_service_.sqliteservice.html">SqliteService</a>
 				</li>
 			</ul>
-			<h1>Class MusiciansDataService</h1>
+			<h1>Class SqliteService</h1>
 		</div>
 	</div>
 </header>
@@ -74,7 +74,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">MusiciansDataService</span>
+						<span class="target">SqliteService</span>
 					</li>
 				</ul>
 			</section>
@@ -85,24 +85,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_client_app_sqlite_service_.sqliteservice.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#use_strict" class="tsd-kind-icon">use strict</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_client_app_sqlite_service_.sqliteservice.html#databasename" class="tsd-kind-icon">database<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_client_app_sqlite_service_.sqliteservice.html#db" class="tsd-kind-icon">db</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_client_app_sqlite_service_.sqliteservice.html#use_strict" class="tsd-kind-icon">use strict</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#add" class="tsd-kind-icon">Add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#delete" class="tsd-kind-icon">Delete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#get" class="tsd-kind-icon">Get</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#getall" class="tsd-kind-icon">Get<wbr>All</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#readjsonfile" class="tsd-kind-icon">ReadJSONFile</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_musicians_dataservice_.musiciansdataservice.html#update" class="tsd-kind-icon">Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_sqlite_service_.sqliteservice.html#read" class="tsd-kind-icon">Read</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_client_app_sqlite_service_.sqliteservice.html#run" class="tsd-kind-icon">Run</a></li>
 							</ul>
 						</section>
 					</div>
@@ -114,29 +112,69 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Musicians<wbr>Data<wbr>Service<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_client_app_musicians_dataservice_.musiciansdataservice.html" class="tsd-signature-type">MusiciansDataService</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Sqlite<wbr>Service<span class="tsd-signature-symbol">(</span>databaseName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_client_app_sqlite_service_.sqliteservice.html" class="tsd-signature-type">SqliteService</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L7">client/app/musicians.dataservice.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/sqlite.service.ts#L10">client/app/sqlite.service.ts:10</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="_client_app_musicians_dataservice_.musiciansdataservice.html" class="tsd-signature-type">MusiciansDataService</a></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new instance of SqliteService.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>databaseName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The database name.</p>
+											<h4 id="notes">Notes</h4>
+											<h4 id="example">Example</h4>
+											<pre><code class="lang-typescript"><span class="hljs-keyword">new</span> SqliteService(theDatabaseName)
+</code></pre>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_client_app_sqlite_service_.sqliteservice.html" class="tsd-signature-type">SqliteService</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="databasename" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> database<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">database<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/sqlite.service.ts#L9">client/app/sqlite.service.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="db" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> db</h3>
+					<div class="tsd-signature tsd-kind-icon">db<span class="tsd-signature-symbol">:</span> <a href="_scripts_typings_sqlite3_sqlite3_d_._sqlite3_.database.html" class="tsd-signature-type">Database</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/sqlite.service.ts#L10">client/app/sqlite.service.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="use_strict" class="tsd-anchor"></a>
 					<h3>use strict</h3>
 					<div class="tsd-signature tsd-kind-icon">use strict<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L7">client/app/musicians.dataservice.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/sqlite.service.ts#L7">client/app/sqlite.service.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -144,177 +182,29 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="add" class="tsd-anchor"></a>
-					<h3>Add</h3>
+					<a name="read" class="tsd-anchor"></a>
+					<h3>Read</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Add<span class="tsd-signature-symbol">(</span>dto<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">Read<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L66">client/app/musicians.dataservice.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/sqlite.service.ts#L42">client/app/sqlite.service.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds the data.</p>
+									<p>Executes the read only queries.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dto: <span class="tsd-signature-type">Object</span></h5>
+									<h5>query: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The data transfer object.</p>
-										<h4 id="notes">Notes</h4>
-										<p>Adds the data to the data source.</p>
-										<h4 id="example">Example</h4>
-										<pre><code class="lang-typescript">Add(theDto)
-</code></pre>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="delete" class="tsd-anchor"></a>
-					<h3>Delete</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Delete<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L98">client/app/musicians.dataservice.ts:98</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Deletes the data.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>id: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The unique identifier.</p>
-										<h4 id="notes">Notes</h4>
-										<p>Deletes the data from the data source by finding the unique identifier.</p>
-										<h4 id="example">Example</h4>
-										<pre><code class="lang-typescript">Delete(theId)
-</code></pre>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="get" class="tsd-anchor"></a>
-					<h3>Get</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L24">client/app/musicians.dataservice.ts:24</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets the data.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>id: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The unique identifier.</p>
-									</div>
-								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The callback to return.</p>
-										<h4 id="notes">Notes</h4>
-										<h4 id="example">Example</h4>
-										<pre><code class="lang-typescript">Get(theId, theCallbackFunction)
-</code></pre>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getall" class="tsd-anchor"></a>
-					<h3>Get<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<wbr>All<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L44">client/app/musicians.dataservice.ts:44</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets all the data.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The callback to return.</p>
-										<h4 id="notes">Notes</h4>
-										<h4 id="example">Example</h4>
-										<pre><code class="lang-typescript">GetAll(theCallbackFunction)
-</code></pre>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="readjsonfile" class="tsd-anchor"></a>
-					<h3>ReadJSONFile</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">ReadJSONFile<span class="tsd-signature-symbol">(</span>filename<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L114">client/app/musicians.dataservice.ts:114</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Reads the JSON file.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>filename: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The filename.</p>
+										<p>The query to be executed.</p>
 									</div>
 								</li>
 								<li>
@@ -322,8 +212,9 @@
 									<div class="tsd-comment tsd-typography">
 										<p>The callback function.</p>
 										<h4 id="notes">Notes</h4>
+										<p>Executes the &quot;all&quot; function of the sqlite class.</p>
 										<h4 id="example">Example</h4>
-										<pre><code class="lang-typescript">ReadJSONFile(theFilename, theCallbackFunction)
+										<pre><code class="lang-typescript">Read(theQuery, theCallbackFunction)
 </code></pre>
 									</div>
 								</li>
@@ -333,33 +224,39 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="update" class="tsd-anchor"></a>
-					<h3>Update</h3>
+					<a name="run" class="tsd-anchor"></a>
+					<h3>Run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Update<span class="tsd-signature-symbol">(</span>dto<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">Run<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/musicians.dataservice.ts#L82">client/app/musicians.dataservice.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/brizzle/Pi_Server/blob/master/src/client/app/sqlite.service.ts#L75">client/app/sqlite.service.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Updates the data.</p>
+									<p>Executes the add, update, and delete queries.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dto: <span class="tsd-signature-type">Object</span></h5>
+									<h5>query: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The data transfer object.</p>
+										<p>The query to be executed.</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The callback function.</p>
 										<h4 id="notes">Notes</h4>
-										<p>Updates the data to the data source.</p>
+										<p>Executes the &quot;run&quot; function of the sqlite class.</p>
 										<h4 id="example">Example</h4>
-										<pre><code class="lang-typescript">Update(theDto)
+										<pre><code class="lang-typescript">Read(theQuery, theCallbackFunction)
 </code></pre>
 									</div>
 								</li>
@@ -380,16 +277,22 @@
 						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_client_app_musicians_controller_.html">"client/app/musicians.controller"</a>
+						<a href="../modules/_client_app_controller_.html">"client/app/controller"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_client_app_musicians_dataservice_.html">"client/app/musicians.dataservice"</a>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_app_dataservice_.html">"client/app/dataservice"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_client_app_file_service_.html">"client/app/file.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_client_app_routes_.html">"client/app/routes"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_client_app_server_.html">"client/app/server"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_client_app_sqlite_service_.html">"client/app/sqlite.service"</a>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Externals</span>
@@ -425,31 +328,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_client_app_musicians_dataservice_.musiciansdataservice.html" class="tsd-kind-icon">Musicians<wbr>Data<wbr>Service</a>
+						<a href="_client_app_sqlite_service_.sqliteservice.html" class="tsd-kind-icon">Sqlite<wbr>Service</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_client_app_sqlite_service_.sqliteservice.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_client_app_sqlite_service_.sqliteservice.html#databasename" class="tsd-kind-icon">database<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_client_app_sqlite_service_.sqliteservice.html#db" class="tsd-kind-icon">db</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#use_strict" class="tsd-kind-icon">use strict</a>
+								<a href="_client_app_sqlite_service_.sqliteservice.html#use_strict" class="tsd-kind-icon">use strict</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#add" class="tsd-kind-icon">Add</a>
+								<a href="_client_app_sqlite_service_.sqliteservice.html#read" class="tsd-kind-icon">Read</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#delete" class="tsd-kind-icon">Delete</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#get" class="tsd-kind-icon">Get</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#getall" class="tsd-kind-icon">Get<wbr>All</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#readjsonfile" class="tsd-kind-icon">ReadJSONFile</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_client_app_musicians_dataservice_.musiciansdataservice.html#update" class="tsd-kind-icon">Update</a>
+								<a href="_client_app_sqlite_service_.sqliteservice.html#run" class="tsd-kind-icon">Run</a>
 							</li>
 						</ul>
 					</li>

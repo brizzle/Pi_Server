@@ -23,8 +23,8 @@
 	// args is the HelloWorld program to compile.
 	"args": ["src/client/app/routes.ts",
     "src/client/app/server.ts",
-    "src/client/app/musicians.controller.ts",
-    "src/client/app/musicians.dataservice.ts",
+    "src/client/app/controller.ts",
+    "src/client/app/dataservice.ts",
     "src/client/app/file.service.ts",
     "src/client/app/sqlite.service.ts"],
 
